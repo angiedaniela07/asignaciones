@@ -6,11 +6,20 @@
 
 package Controladores;
 
+import Vistas.FrmAsignaciones;
+
 /**
  *
  * @author Sala221
  */
-public class ValidarPpal {
+public class ppial {
+
+    /**
+     * @param args the command line arguments
+     */
+    public static void main(String[] args) {
+        
+        new ControladorAsignacioens(new FrmAsignaciones()).iniciar();
+    }
     
 }
-

@@ -30,6 +30,7 @@ public class FrmAsignaciones extends javax.swing.JFrame {
          
     }
     
+    
   
     
         
@@ -51,7 +52,7 @@ public class FrmAsignaciones extends javax.swing.JFrame {
         jLbListado = new javax.swing.JLabel();
         jComboListado = new javax.swing.JComboBox();
         jLbEstudiante = new javax.swing.JLabel();
-        jTFEstudiante = new javax.swing.JTextField();
+        jTxtdocu = new javax.swing.JTextField();
         jLbNumeroCaso = new javax.swing.JLabel();
         jTFNumeroCaso = new javax.swing.JTextField();
         jLBFechaAsignacion = new javax.swing.JLabel();
@@ -66,9 +67,9 @@ public class FrmAsignaciones extends javax.swing.JFrame {
         jBTReasignar = new javax.swing.JButton();
         jScrollPane2 = new javax.swing.JScrollPane();
         jTblListado = new javax.swing.JTable();
-        jCbPrueba = new javax.swing.JComboBox();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
+        setResizable(false);
 
         jLbEm.setText("Uso exclusivo del monitor");
 
@@ -80,11 +81,11 @@ public class FrmAsignaciones extends javax.swing.JFrame {
             }
         });
 
-        jLbEstudiante.setText("Estudiante Asignado");
+        jLbEstudiante.setText("Documento:");
 
-        jTFEstudiante.addKeyListener(new java.awt.event.KeyAdapter() {
+        jTxtdocu.addKeyListener(new java.awt.event.KeyAdapter() {
             public void keyTyped(java.awt.event.KeyEvent evt) {
-                jTFEstudianteKeyTyped(evt);
+                jTxtdocuKeyTyped(evt);
             }
         });
 
@@ -124,45 +125,31 @@ public class FrmAsignaciones extends javax.swing.JFrame {
 
         jTblListado.setModel(new javax.swing.table.DefaultTableModel(
             new Object [][] {
-                {null, null, null, null},
-                {null, null, null, null},
-                {null, null, null, null},
-                {null, null, null, null}
+                {},
+                {},
+                {},
+                {}
             },
             new String [] {
-                "Title 1", "Title 2", "Title 3", "Title 4"
+
             }
         ));
         jScrollPane2.setViewportView(jTblListado);
-
-        jCbPrueba.setModel(new javax.swing.DefaultComboBoxModel(new String[] { "Item 1", "Item 2", "Item 3", "Item 4" }));
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
         layout.setHorizontalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
-                .addGap(37, 37, 37)
-                .addComponent(jBTAsignar)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 156, Short.MAX_VALUE)
-                .addComponent(jBtSalir)
-                .addGap(159, 159, 159)
-                .addComponent(jBTReasignar)
-                .addGap(319, 319, 319))
             .addGroup(layout.createSequentialGroup()
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addGroup(layout.createSequentialGroup()
+                        .addContainerGap()
                         .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
                             .addGroup(layout.createSequentialGroup()
-                                .addGap(147, 147, 147)
-                                .addComponent(jLbEm))
-                            .addGroup(layout.createSequentialGroup()
-                                .addContainerGap()
                                 .addComponent(jLbListado)
                                 .addGap(95, 95, 95)
                                 .addComponent(jComboListado, 0, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
                             .addGroup(layout.createSequentialGroup()
-                                .addContainerGap()
                                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                                     .addComponent(jLbEstudiante)
                                     .addComponent(jLbNumeroCaso)
@@ -173,64 +160,74 @@ public class FrmAsignaciones extends javax.swing.JFrame {
                                     .addComponent(jTFNumeroCaso)
                                     .addComponent(jDateAsignacion, javax.swing.GroupLayout.DEFAULT_SIZE, 156, Short.MAX_VALUE)
                                     .addComponent(jDateRevocacion, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                                    .addComponent(jTFEstudiante))))
-                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addGroup(layout.createSequentialGroup()
-                                .addGap(66, 66, 66)
-                                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                                    .addComponent(jLBAsunto)
-                                    .addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, 329, javax.swing.GroupLayout.PREFERRED_SIZE)))
-                            .addGroup(layout.createSequentialGroup()
-                                .addGap(29, 29, 29)
-                                .addComponent(jCbPrueba, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))))
+                                    .addComponent(jTxtdocu)))))
                     .addGroup(layout.createSequentialGroup()
-                        .addGap(27, 27, 27)
-                        .addComponent(jScrollPane2, javax.swing.GroupLayout.PREFERRED_SIZE, 455, javax.swing.GroupLayout.PREFERRED_SIZE)))
-                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                        .addGap(157, 157, 157)
+                        .addComponent(jLbEm)))
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
+                        .addComponent(jLBAsunto)
+                        .addGap(295, 295, 295))
+                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
+                        .addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, 329, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addContainerGap())))
+            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
+                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
+                    .addGroup(layout.createSequentialGroup()
+                        .addContainerGap()
+                        .addComponent(jScrollPane2, javax.swing.GroupLayout.DEFAULT_SIZE, 475, Short.MAX_VALUE))
+                    .addGroup(layout.createSequentialGroup()
+                        .addGap(49, 49, 49)
+                        .addComponent(jBTAsignar)
+                        .addGap(84, 84, 84)
+                        .addComponent(jBtSalir)
+                        .addGap(89, 89, 89)
+                        .addComponent(jBTReasignar)
+                        .addGap(0, 0, Short.MAX_VALUE)))
+                .addGap(336, 336, 336))
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(layout.createSequentialGroup()
-                .addGap(18, 18, 18)
+                .addContainerGap()
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
+                    .addComponent(jLBAsunto)
+                    .addComponent(jLbEm))
+                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addGroup(layout.createSequentialGroup()
-                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addGroup(layout.createSequentialGroup()
-                                .addComponent(jLbEm)
-                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                                    .addComponent(jLbListado)
-                                    .addComponent(jComboListado, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                                .addGap(18, 18, 18)
-                                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                                    .addComponent(jLbEstudiante)
-                                    .addComponent(jTFEstudiante, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                                    .addComponent(jLbNumeroCaso)
-                                    .addComponent(jTFNumeroCaso, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                                .addGap(20, 20, 20)
-                                .addComponent(jLBFechaAsignacion))
-                            .addComponent(jDateAsignacion, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                        .addGap(26, 26, 26)
-                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addComponent(jDateRevocacion, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addComponent(jLbFechaRevocacion))
-                        .addGap(43, 43, 43))
-                    .addGroup(layout.createSequentialGroup()
-                        .addComponent(jLBAsunto)
                         .addGap(18, 18, 18)
-                        .addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addGap(52, 52, 52)
-                        .addComponent(jCbPrueba, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addGap(35, 35, 35)))
+                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addComponent(jLbListado)
+                            .addComponent(jComboListado, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                        .addGap(18, 18, 18)
+                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addComponent(jLbEstudiante)
+                            .addComponent(jTxtdocu, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addComponent(jLbNumeroCaso)
+                            .addComponent(jTFNumeroCaso, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                        .addGap(20, 20, 20)
+                        .addComponent(jLBFechaAsignacion))
+                    .addGroup(layout.createSequentialGroup()
+                        .addGap(33, 33, 33)
+                        .addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
+                        .addGap(121, 121, 121)
+                        .addComponent(jDateAsignacion, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                .addGap(26, 26, 26)
+                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addComponent(jDateRevocacion, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(jLbFechaRevocacion))
+                .addGap(43, 43, 43)
                 .addComponent(jScrollPane2, javax.swing.GroupLayout.PREFERRED_SIZE, 103, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(38, 38, 38)
+                .addGap(18, 18, 18)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(jBTReasignar)
+                    .addComponent(jBTAsignar)
                     .addComponent(jBtSalir)
-                    .addComponent(jBTAsignar))
-                .addContainerGap(128, Short.MAX_VALUE))
+                    .addComponent(jBTReasignar))
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
 
         pack();
@@ -262,11 +259,11 @@ public class FrmAsignaciones extends javax.swing.JFrame {
         if((c<'a' || c>'z') && (c<'A' || c>'Z')) evt.consume();
     }//GEN-LAST:event_jTAsuntoKeyTyped
 
-    private void jTFEstudianteKeyTyped(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_jTFEstudianteKeyTyped
+    private void jTxtdocuKeyTyped(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_jTxtdocuKeyTyped
         // TODO add your handling code here:
           char  c = evt.getKeyChar();
         if((c<'a' || c>'z') && (c<'A' || c>'Z')) evt.consume();
-    }//GEN-LAST:event_jTFEstudianteKeyTyped
+    }//GEN-LAST:event_jTxtdocuKeyTyped
 
     /**
      * @param args the command line arguments
@@ -307,10 +304,9 @@ public class FrmAsignaciones extends javax.swing.JFrame {
     public javax.swing.JButton jBTAsignar;
     public javax.swing.JButton jBTReasignar;
     public javax.swing.JButton jBtSalir;
-    public javax.swing.JComboBox jCbPrueba;
     public javax.swing.JComboBox jComboListado;
-    private com.toedter.calendar.JDateChooser jDateAsignacion;
-    private com.toedter.calendar.JDateChooser jDateRevocacion;
+    public com.toedter.calendar.JDateChooser jDateAsignacion;
+    public com.toedter.calendar.JDateChooser jDateRevocacion;
     private javax.swing.JLabel jLBAsunto;
     private javax.swing.JLabel jLBFechaAsignacion;
     private javax.swing.JLabel jLbEm;
@@ -320,9 +316,9 @@ public class FrmAsignaciones extends javax.swing.JFrame {
     private javax.swing.JLabel jLbNumeroCaso;
     private javax.swing.JScrollPane jScrollPane1;
     private javax.swing.JScrollPane jScrollPane2;
-    private javax.swing.JTextArea jTAsunto;
-    private javax.swing.JTextField jTFEstudiante;
+    public javax.swing.JTextArea jTAsunto;
     public javax.swing.JTextField jTFNumeroCaso;
     public javax.swing.JTable jTblListado;
+    public javax.swing.JTextField jTxtdocu;
     // End of variables declaration//GEN-END:variables
 }
